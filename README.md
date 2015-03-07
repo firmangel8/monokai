@@ -1,35 +1,45 @@
 # monokai
 Monokai theme for Xcode
 
-# Clone a repository into a new directory:
+
+# Clone a repository into a new directory
 	git clone URLdoGIT
 
-# Show the working tree status:
+
+# Show the working tree status
 	git status
 
-# Add file contents to the index:
+
+# Add file contents to the index
 	git add ARQUIVO.js || git add .
 
-# Reset current HEAD to the specified state:
+
+# Reset current HEAD to the specified state
 	git reset
 
-# commit:
+
+# commit
 	git commit -m "comment"
 
-# Show last commit:
+
+# Show last commit
 	git show
 
-# editar o commit:
+
+# editar o commit
 	git commit --amend
 
-# resetar o autor pegando os valores globais:
+
+# resetar o autor pegando os valores globais
 	git commit --amend --reset-author
 
-# override date for this commit:
+
+# override date for this commit
 	git commit --amend --date "Tue Mar 24 11:11:11 2015 -0300"
 
-# override date for this commit:
-	git commit --date "Tue Mar 12 12:12:12 2015 -0300"
+
+# reuse and edit message from specified commit
+	git config -c "81f3ccacf9cd650dd54af10241f7919b55dffa26"
 
 
 
