@@ -39,7 +39,7 @@ Monokai theme for Xcode
 
 
 # reuse and edit message from specified commit
-	git config -c "81f3ccacf9cd650dd54af10241f7919b55dffa26"
+	git commit -c "9c1c18ae491c015f2a04ac3a200e3c582abe6980"
 
 
 
