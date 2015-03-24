@@ -1,9 +1,5 @@
 # monokai
-<<<<<<< HEAD
-Monokai theme for Xcode.
-=======
 Monokai theme for Xcode!!!
->>>>>>> f5effc2b56bbcf3fa4e68625e6ed91b3f1af277d
 
 
 # clone a repository into a new directory
