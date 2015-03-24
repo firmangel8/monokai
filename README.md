@@ -11,7 +11,7 @@ Monokai theme for Xcode
 
 
 # Add file contents to the index
-	git add ARQUIVO.js || git add .
+	git add ARQUIVO.js || git add --all
 
 
 # Reset current HEAD to the specified state
@@ -40,7 +40,6 @@ Monokai theme for Xcode
 
 # reuse and edit message from specified commit
 	git commit -c "9c1c18ae491c015f2a04ac3a200e3c582abe6980"
-
 
 
 # Alterando as globais:
