@@ -1,5 +1,5 @@
 # monokai
-Monokai theme for Xcode
+Monokai theme for Xcode.
 
 
 # clone a repository into a new directory
@@ -17,6 +17,9 @@ Monokai theme for Xcode
 # remove file contents to the index
 	git reset
 
+
+# add and commit
+	git commit -a -m "comment"
 
 # commit
 	git commit -m "comment"
