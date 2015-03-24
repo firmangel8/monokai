@@ -26,7 +26,7 @@ Monokai theme for Xcode
 	git show
 
 
-# editar o commit
+# edit commit
 	git commit --amend
 
 
@@ -35,11 +35,7 @@ Monokai theme for Xcode
 
 
 # override date for this commit
-	git commit --amend --date "Tue Mar 24 11:11:11 2015 -0300"
-
-
-# reuse and edit message from specified commit
-	git commit -c "9c1c18ae491c015f2a04ac3a200e3c582abe6980"
+	git commit --amend --date "Tue Mar 11 11:11:11 2015 -0300"
 
 
 # Alterando as globais:
