@@ -10,6 +10,14 @@ Monokai theme for Xcode!!!
 	git status
 
 
+# show changed files
+	git --no-pager diff
+
+
+# show last commit
+	git --no-pager show
+
+
 # add file contents to the index
 	git add ARQUIVO.js || git add --all || git add -A
 
@@ -23,11 +31,6 @@ Monokai theme for Xcode!!!
 
 # commit
 	git commit -m "comment"
-
-
-# show last commit
-	git show
-
 
 # edit commit
 	git commit --amend
