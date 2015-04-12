@@ -48,4 +48,6 @@ Monokai theme for Xcode!!!
 # resetar o autor pegando os valores globais
   	git commit --amend --reset-author
 
+
+https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 ~/.oh-my-zsh/lib/directories.zsh
