@@ -47,3 +47,5 @@ Monokai theme for Xcode!!!
 
 # resetar o autor pegando os valores globais
   	git commit --amend --reset-author
+
+~/.oh-my-zsh/lib/directories.zsh
