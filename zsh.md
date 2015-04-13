@@ -7,6 +7,7 @@
     alias ca='cp -r'
     alias rdf='rm -rf'
     alias gs='git status'
+    alias gru='grunt'
 
     https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 
