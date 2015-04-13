@@ -1,8 +1,11 @@
 # ~/.oh-my-zsh/lib/directories.zsh
-    alias c='clear'
-    alias a='atom'
     alias boss='sudo '
+    alias a='atom'
+    alias c='clear'
     alias t='touch'
+    alias o='open'
+    alias ca='cp -r'
+    alias rdf='rm -rf'
     alias gs='git status'
 
     https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
