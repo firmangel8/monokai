@@ -1,2 +1,2 @@
 # monokai
-Monokai theme for Xcode!!!
+Monokai theme for Xcode, Terminal and Oh My Zsh.
