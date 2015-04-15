@@ -8,6 +8,7 @@
     alias rdf='rm -rf'
     alias gs='git status'
     alias gru='grunt'
+    alias sv='http-server -a localhost -p'
 
     https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 
