@@ -1,7 +1,7 @@
-# my_git_prompt_info_status() from mortalscumbag.zsh-theme
-# better than git_prompt_info() + git_prompt_status() on .oh-my-zsh/lib/git.zsh
+# my_git_prompt_status() from mortalscumbag.zsh-theme
+# better than git_prompt_status() on .oh-my-zsh/lib/git.zsh
 # because of the STAGED|UNSTAGED behavior
-function my_git_prompt_info_status() {
+function my_git_prompt_status() {
   tester=$(git rev-parse --git-dir 2> /dev/null) || return
   
   INDEX=$(git status --porcelain 2> /dev/null)
@@ -41,7 +41,7 @@ function my_git_prompt_info_status() {
     STATUS="$STATUS"
   fi
 
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(my_current_branch)$STATUS$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo "$STATUS"
 }
 
 function my_current_branch() {
@@ -64,17 +64,28 @@ local CYAN=$fg_bold[cyan]
 local MAGENTA=$fg_bold[magenta]
 local ret_status="%(?:%{$WHITE%}:%{$RED%})"
 
-
 # left
-PROMPT='$(ssh_connection)${ret_status} '
-# right
-RPROMPT='%{$CYAN%}${PWD/#$HOME/~}$(my_git_prompt_info_status)$(git_remote_status)'
+PROMPT='\
+$(ssh_connection)\
+${ret_status}\
+ \
+%{$reset_color%}'
 
-# my_git_prompt_info_status()
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$GREEN%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+# right
+RPROMPT='\
+%{$CYAN%}\
+${PWD/#$HOME/~}\
+%{$WHITE%}\
+$(git_remote_status) \
+%{$GREEN%}\
+$(my_current_branch)\
+%{$reset_color%}\
+$(my_git_prompt_status)\
+%{$reset_color%}'
+
+# my_git_prompt_status()
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$MAGENTA%} committed" # ↑
-ZSH_THEME_GIT_PROMPT_BEHIND="%{$GREEN%} committed behind" # ↓
+ZSH_THEME_GIT_PROMPT_BEHIND="%{$RED%} behind" # ↓
 ZSH_THEME_GIT_PROMPT_STAGED="%{$YELLOW%} staged" # ●
 ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$RED%} unstaged" # ●
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$BLUE%} untracked" # ●
@@ -82,6 +93,6 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$RED%} unmerged" # ✕
 
 # git_remote_status() from .oh-my-zsh/lib/git.zsh
 ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE=""
-ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=" AHEAD_REMOTE"
-ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" BEHIND_REMOTE"
-ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE=" DIVERGED_REMOTE"
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=" ↑"
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" ↓"
+ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE=" ≠"
